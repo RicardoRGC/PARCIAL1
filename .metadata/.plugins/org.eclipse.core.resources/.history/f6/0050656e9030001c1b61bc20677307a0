@@ -1,0 +1,19 @@
+/*
+ * auxiliar.h
+ *
+ *  Created on: 19 oct. 2021
+ *      Author: riky
+ */
+
+#ifndef AUXILIAR_H_
+#define AUXILIAR_H_
+
+typedef struct
+{
+		int contador;
+		int id;
+
+}eAuxiliar;
+
+
+#endif /* AUXILIAR_H_ */

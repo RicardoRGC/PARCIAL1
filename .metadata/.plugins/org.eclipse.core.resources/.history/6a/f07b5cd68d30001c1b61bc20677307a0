@@ -1,0 +1,28 @@
+/*
+ * DateRelacion.h
+ *
+ *  Created on: 13 oct. 2021
+ *      Author: riky
+ */
+#include "B.h"
+#include "Clientes.h"
+#ifndef DATERELACION_H_
+#define DATERELACION_H_
+#define REINTENTOS 3
+#define VACIO 0
+#define CARGADO 1
+#define TAMCARACTER 50
+typedef struct
+{
+		int idLocalidad;
+		char descripcion[50];
+		int isEmpty;
+}eLocalidad;
+
+int InicializarArrayLocalidad(eLocalidad* list, int tam);
+int addLocalidad(eLocalidad* list, int len, int id, char localidad[]);
+int BuscarPrimerEspacioVacioL(eLocalidad* lista, int tam);
+void MostrarLocalidad(eLocalidad list);
+int printLocalidades(eLocalidad* lista, int largo);
+int CargarLocalidad(eLocalidad lista[], int tam, int* contadorId);
+#endif /* DATERELACION_H_ */

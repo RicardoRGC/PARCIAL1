@@ -1,0 +1,32 @@
+/*
+ * Clientes.h
+ *
+ *  Created on: 19 oct. 2021
+ *      Author: riky
+ */
+
+#ifndef CLIENTES_H_
+#define CLIENTES_H_
+
+#include "DateRelacion.h"
+#include "B.h"
+typedef struct
+{
+		int id;
+		char empresa[50];
+		char direccion[50];
+		double cuit;
+		int idLocalidad;
+
+		int isEmpty;
+}eClientes;
+int buscarlistaCargada(eClientes* lista, int tam);
+int printEmployees(eClientes* lista, int largo);
+int addEmployee(eClientes* list, int len, int id, char empresa[],char direccion[],int localidad,
+				double cuit);
+//void MostrarEmpleado(eClientes list);
+int InicializarArray(eClientes* list, int tam);
+int BuscarPrimerEspacioVacio(eClientes* lista, int tam);
+
+
+#endif /* CLIENTES_H_ */

@@ -1,0 +1,51 @@
+/*
+ * Pedidos.h
+ *
+ *  Created on: 14 oct. 2021
+ *      Author: riky
+ */
+
+#ifndef PEDIDOS_H_
+#define PEDIDOS_H_
+#define REINTENTOS 3
+#define VACIO 0
+#define CARGADO 1
+#define PENDIENTE 5
+#define COMPLETADO 1
+#define TAMCARACTER 50
+#define PEDIDOS 1000
+#define CLIENTES 100
+typedef struct
+{
+	int idClientes; // comparte con cliente
+	int kilos;
+	int isEmpty;
+	int HDPE;
+	int LDPE;
+	int PP;
+	int idINCREMENTABLE; //personal
+
+} ePedidos;
+void MostrarPedidoConPlastico(ePedidos list, eClientes listaclientes);
+int buscarListaPendientePedidos(ePedidos* lista, int tam);
+int buscarListaCargadaPedidos(ePedidos* lista, int tam);
+int BuscarClienteEnPedido(ePedidos* listaPedidos ,eClientes listaClientes, int tamPedidos, int tamClientes);
+int printPedidosCompletado( ePedidos* listaPedidos,eClientes* listaClientes, int tamPedidos, int tamClientes);
+int EspacioPendientePedidos(ePedidos* lista, int tam);
+int ProcesarResiduos(ePedidos listaPedidos[], int tamPedidos, eClientes* listaCliente,
+				int tamClientes,int contadorPedidos);
+int buscarPorIdPedidos(ePedidos* listaPedidos, int tamPedidos, int idPedido);
+int printPedidosPendiente(ePedidos* listaPedidos, eClientes* listaClientes, int tamPedidos,
+				int tamClientes);
+int BuscarIgualesPyC(ePedidos listaPedidos, eClientes* listaClientes, int tamPedidos,
+				int tamClientes);
+int addPedidos(ePedidos* list, int len, int id, int kilos,eClientes* listaCliente,
+				int tamClientes,int idPedidoCliente);
+int CargarPedidos(ePedidos lista[], int tam, int* contadorId, eClientes* listaCliente,
+				int tamClientes, int idPedidoCliente);
+int InicializarArrayPedidos(ePedidos* list, int tam);
+int EspacioVacioPedidos(ePedidos* lista, int tam);
+int printPedidos(ePedidos* listaPedidos, eClientes* listaClientes, int tamPedidos, int tamClientes);
+
+void MostrarPedido(ePedidos list, eClientes listaclientes);
+#endif /* PEDIDOS_H_ */
